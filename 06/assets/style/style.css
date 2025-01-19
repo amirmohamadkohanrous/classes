@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "para";
+    src: url(../fonts/Inter-Bold.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "title";
+    src: url(../fonts/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: "font";
+    src: url(../fonts/Inter-SemiBold.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "fonts";
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 400;
+
+}
+
+.cssdiv {
+    width: 500px;
+    height: 700px;
+    background-color: #1f1f1f;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+.cssdiv > div img {
+    margin-top: 50px;
+    border-radius: 90px;
+    width: 120px;
+}
+div div:nth-child(1) {
+    display: block;
+    text-align: center;
+    
+}
+
+div div:last-child ul li{
+    list-style-type: none;
+    width: 400px;
+    margin-top: 30px;
+    height: 35px;
+    background-color: #333333;
+    border-radius: 5px;
+}
+div div:last-child ul li {
+    padding-top: 15px;
+    margin-bottom: -10px;
+    text-align: center;
+}
+div div:last-child ul a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+body{
+    background-color: #141414;
+}
+div div:last-child ul a li:hover{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-color: #c5f82a;
+    transition: 0.3s;
+
+}
+@media screen and (max-width: 480px) {
+    
+    .cssdiv{
+        
+    }
+}
