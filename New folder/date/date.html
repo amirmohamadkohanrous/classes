@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="date.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="continer">
+		<div class="inputs">
+			<div class="input">
+				<p class="input-text">DD</p>
+				<input type="number" id="day-input" min='1' max='31' placeholder="DD">
+				<div id="error1" class="error"></div>
+			</div>
+			<div class="input">
+				<p class="input-text">MM</p>
+				<input type="number" id="month-input" min='1' max='12' placeholder="MM">
+				<div class="error" id="error2"></div>
+			</div>
+			<div class="input">
+				<p class="input-text">YYYY</p>
+				<input type="number" id="year-input" min='1' max='2025' placeholder="YYYY">
+				<div class="error" id="error3"></div>
+			</div>
+			<button class="send-icon" onclick="checkInput1() , checkInput2() , checkInput3()">
+				<img class="img" src="icon-arrow.svg" alt="icon">
+			</button>
+		</div>
+		<div class="main-text">
+			<div class="text-div">
+				<p class="text"><span class="text-color">- -</span> years</p>
+			</div>
+			<div class="text-div">
+				<p class="text"><span class="text-color">- -</span> months</p>
+			</div>
+			<div class="text-div">
+				<p class="text"><span class="text-color">- -</span> days</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function checkInput1() {
+			const day = parseInt(document.getElementById('day-input').value);
+
+
+			if (isNaN(day) || day >= 31 || day <= 0 ) {
+				document.getElementById('error1').innerText = 'error';
+				return;
+			}
+		}
+		function checkInput2() {
+
+			const month = parseInt(document.getElementById("month-input").value);
+
+
+			if (isNaN(month) || month >= 13 || month <= 0) {
+				document.getElementById('error2').innerText = 'error';
+				return;
+			}
+		}
+		function checkInput3() {
+			const year = parseInt(document.getElementById('year-input').value);
+
+			if (isNaN(year) || year > 2025 || year <= 1) {
+				document.getElementById('error3').innerText = 'error';
+				return;
+			}
+		}
+	</script>
+</body>
+</html>
