@@ -1,4 +1,4 @@
-div:nth-child(1) {
+.bmi {
     margin: auto;
     width: 600px;
     height: 400px;
@@ -10,7 +10,7 @@ div:nth-child(1) {
 * {
     box-sizing: border-box;
 }
-div:nth-child(1) > form > input , button {
+div div  form  input , button {
     display: grid;
     /* position: absolute  ; */
     margin: auto;
@@ -29,3 +29,10 @@ div:nth-child(1) > form > input , button {
     position: absolute;
     margin: 50px 200px;
 }
+input {
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 160px;
+}
+
