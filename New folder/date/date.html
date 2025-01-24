@@ -8,22 +8,22 @@
 <body>
 	<div class="continer">
 		<div class="inputs">
-			<div class="input">
+			<div class="input ">
 				<p class="input-text">DD</p>
-				<input type="number" id="day-input" min='1' max='31' placeholder="DD">
-				<div id="error1" class="error"></div>
+				<input type="number" class="day-input" id="day-input" min='1' max='31' placeholder="DD">
+				<p id="error1" ></p>
 			</div>
 			<div class="input">
 				<p class="input-text">MM</p>
-				<input type="number" id="month-input" min='1' max='12' placeholder="MM">
-				<div class="error" id="error2"></div>
+				<input type="number" class="month-input" id="month-input" min='1' max='12' placeholder="MM">
+				<p id="error2" ></p>
 			</div>
 			<div class="input">
 				<p class="input-text">YYYY</p>
-				<input type="number" id="year-input" min='1' max='2025' placeholder="YYYY">
-				<div class="error" id="error3"></div>
+				<input type="number" class="year-input" id="year-input" min='1' max='2025' placeholder="YYYY">
+				<p id="error3" ></p>
 			</div>
-			<button class="send-icon" onclick="checkInput1() , checkInput2() , checkInput3()">
+			<button class="send-icon" >
 				<img class="img" src="icon-arrow.svg" alt="icon">
 			</button>
 		</div>
@@ -32,42 +32,15 @@
 				<p class="text"><span class="text-color">- -</span> years</p>
 			</div>
 			<div class="text-div">
-				<p class="text"><span class="text-color">- -</span> months</p>
+				<p class="text"><span class="text-color1">- -</span> months</p>
 			</div>
 			<div class="text-div">
-				<p class="text"><span class="text-color">- -</span> days</p>
+				<p class="text"><span class="text-color2">- -</span> days</p>
 			</div>
 		</div>
 	</div>
 
-	<script>
-		function checkInput1() {
-			const day = parseInt(document.getElementById('day-input').value);
-
-
-			if (isNaN(day) || day >= 31 || day <= 0 ) {
-				document.getElementById('error1').innerText = 'error';
-				return;
-			}
-		}
-		function checkInput2() {
-
-			const month = parseInt(document.getElementById("month-input").value);
-
-
-			if (isNaN(month) || month >= 13 || month <= 0) {
-				document.getElementById('error2').innerText = 'error';
-				return;
-			}
-		}
-		function checkInput3() {
-			const year = parseInt(document.getElementById('year-input').value);
-
-			if (isNaN(year) || year > 2025 || year <= 1) {
-				document.getElementById('error3').innerText = 'error';
-				return;
-			}
-		}
+	<script src="main.js">
 	</script>
 </body>
 </html>

@@ -1,7 +1,4 @@
-@font-face {
-	font-family: 'pop';
-	src: url(../fonts/Poppins-Bold.ttf);
-}
+
 
 * {
 	box-sizing: border-box;
@@ -55,6 +52,11 @@
 	font-family: 'pop';
 }
 
-.text-color {
+.text-color, .text-color1 , .text-color2 {
 	color: #854dff;
+}
+.error {
+	opacity: 1 ;
+	color: red;
+	font-size: 12px;
 }
