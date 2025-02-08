@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assits/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main class="main calculator">
+        <div class="calculator__container">
+            <div class="calculator__user-input">
+                <div class="calculator__input-block input-block">
+                    <p class="input-block__text">Day</p>
+                    <input class="input-block__input input-days" type="number" min="1" placeholder="DD">
+                    <p class="input-blok__text-error">text error</p>
+                </div>
+                <div class="calculator__input-block input-block">
+                    <p class="input-block__text">Month</p>
+                    <input class="input-block__input input-months" type="number" min="1" placeholder="MM">
+                    <p class="input-blok__text-error">text error</p>
+                </div>
+                <div class="calculator__input-block input-block">
+                    <p class="input-block__text">Day</p>
+                    <input class="input-block__input input-years" type="number" min="1" placeholder="YY">
+                    <p class="input-blok__text-error">text error</p>
+                </div>
+                <button class="calculator__user-input-btn"></button>
+            </div>
+            <div class="calculator__output output">
+                <div class="output__text output-years"><span>- -</span>years</div>
+                <div class="output__text output-month"><span>- -</span>month</div>
+                <div class="output__text output-days"><span>- -</span>days</div>
+            </div>
+        </div>
+    </main>
+    <script src="assits/main.js"></script>
+</body>
+</html>
