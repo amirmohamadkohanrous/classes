@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputmonth = document.querySelector('.input-months');
     const inputyear = document.querySelector('.input-years');
 
-    const button = document.querySelector('.caculator__user-input-btn');
+    const button = document.querySelector('.calculator__user-input-btn');
 
     function validateinput(input, condition, errormassage) {
         if (condition) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (inputDate.getMonth() !== month) {
+        if (inputDate.getMonth() !== month-1) {
             validateinput(inputmonth, true, 'must be a valid date');
             return;
         }
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         const outputday = document.querySelector('.output-days span');
-        const outputmonth = document.querySelector('.output-months span');
+        const outputmonth = document.querySelector('.output-month span');
         const outputyear = document.querySelector('.output-years span');
 
         animateoutput(outputyear, ageyear);
