@@ -79,11 +79,6 @@
     filter: drop-shadow(0 0 0.3rem hsl(0, 1%, 44%));
 }
 
-@media (hover : hover) {
-    .calculator__user-input-btn::after {
-        background-color: hsl(0, 0%, 8%);
-    }
-}
 
 .calculator__user-input-btn::after {
     content: "";
