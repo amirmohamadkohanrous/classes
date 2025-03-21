@@ -27,6 +27,18 @@ if (existingTheme) {
     toggletheme(existingTheme);
 }
 
+function inputDecimal(dot) {
+    if (calculator.haveSecondOperand === true) {
+        calculator.displayValue = "0"
+        calculator.haveSecondOperand = false;
+        return
+    }
+
+    if (!calculator.displayValue.includes(dot)) {
+        calculator.displayValue += dot;
+    }
+}
+
 theme1.addEventListener('click', () => toggletheme('theme1')); 
 
 theme2.addEventListener('click', () => toggletheme('theme2'));
@@ -43,10 +55,79 @@ else {
     toggletheme('theme1');
 }
 
+function inputDigit(digit) {
+    const {
+        displayValue,
+        haveSecondOperand
+    } = calculator;
+
+    if (haveSecondOperand === true) {
+        calculator.displayValue = digit;
+        calculator.haveSecondOperand = false;
+    }
+
+    else {
+        if (calculator.displayValue.length <= 10) {
+            calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+        
+        }
+    }
+}
+
 function updateDispaly() {
     const display = document.getElementById('display')
+    
     display.textContent = Number(calculator.displayValue) <= 99999999999 ? Number(calculator.displayValue).toLocaleString('en-US', {maximumFractionDigits: decimalPercision}) : Number(calculator.displayValue).toExponential(4);
 }
+
+function handleOperator(nextOperator) {
+    const {
+        firstOperand,
+        displayValue,
+        operator
+    } = calculator
+    const inputvalue = parseFloat(displayValue)
+
+    if (operator !== '=' && calculator.haveSecondOperand) {
+        calculator.operator = nextOperator;
+        return
+    }
+
+    if (firstOperand == null && !isNaN(inputvalue)) {
+        calculator.firstOperand = inputvalue;
+    }
+
+    else if (operator) {
+        const result = calculate(firstOperand, inputvalue, operator)
+
+        calculator.displayValue = `${parseFloat(result.toFixed(decimalpercision))}`;
+        calculator.operator = nextOperator
+    }
+}
+
+function calculate(firstOperand, SecondOperand, operator) {
+    if (operator === '+') {
+        return firstOperand + SecondOperand;
+    }
+    else if (operator === '-') {
+        return firstOperand - SecondOperand;
+    }
+    else if (operator === 'x') {
+        return firstOperand * SecondOperand;
+    }
+    else if (operator === '/') {
+        return firstOperand / SecondOperand;
+    }
+    return SecondOperand;
+}
+
+function resetCalculator() {
+    calculator.displayValue = "0";
+    calculator.firstOperand = null;
+    calculator.haveSecondOperand= false;
+    calculator.operator = null;
+}
+
 
 function handleInput(input) {
     switch (input) {
@@ -70,7 +151,7 @@ function handleInput(input) {
             inputDecimal(input)
             break
         case 'RESET':
-            // resetCalculator()
+            resetCalculator()
             break
         default:
             if (Number.isInteger(parseFloat(input))) {
@@ -101,44 +182,6 @@ document.body.addEventListener('keyup', e => {
     handleInput(key)
 })
 
-function resetCalculator() {
-    calculator.displayValue = "0";
-    calculator.firstOperand = null;
-    calculator.haveSecondOperand= false;
-    calculator.operator = null;
-}
 
-function calculate(firstOperand, SecondOperand, operator) {
-    if (operator === '+') {
-        return firstOperand + SecondOperand;
-    }
-    else if (operator === '-') {
-        return firstOperand - SecondOperand;
-    }
-    else if (operator === 'x') {
-        return firstOperand * SecondOperand;
-    }
-    else if (operator === '/') {
-        return firstOperand / SecondOperand;
-    }
-    return SecondOperand;
-}
 
-function inputDigit(digit) {
-    const {
-        displayValue,
-        haveSecondOperand
-    } = calculator;
 
-    if (haveSecondOperand === true) {
-        calculator.displayValue = digit;
-        calculator.haveSecondOperand = false;
-    }
-
-    else {
-        if (calculator.displayValue.length <= 10) {
-            calculator.displayValue = displayValue === '0' ? digit : displayValue = digit;
-        
-        }
-    }
-}
