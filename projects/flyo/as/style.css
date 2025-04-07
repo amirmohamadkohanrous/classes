@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "title-en";
+    src: url(font/versatylorounded-jr1ma.ttf);
+
+}
+
+@font-face {
+    font-family: "text-en";
+    src: url(font/JUST\ Sans\ Regular.otf);
+}
+
+@font-face {
+    font-family: "title-fa";
+    src: url(font/Frutiger\ LT\ Arabic\ 55\ Roman.ttf);
+}
+
+@font-face {
+    font-family: "text-fa";
+    src: url(font/AzarMehrMonospacedSansBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "text-en";
+}
+body {
+    background-color: hsl(217, 28%, 15%);
+    height: 100vh;
+}
+
+.logo img{
+    width: 150px;
+
+}
+
+header {
+    margin-top: 20px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ul-header ul a {
+    color: #c7c4c4;
+    text-decoration: none;
+    opacity: 0.7;
+
+}
+
+.ul-header ul li {
+    list-style-type: none;
+    font-size: 20px;
+    font-family: "title-en";
+}
+
+.ul-header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.ul-header ul a:hover {
+    color: white;
+    text-decoration: underline;
+    opacity: 1;
+    transition: 100ms ;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    flex-direction: column;
+    background: url(images/bg-curvy-desktop.svg) no-repeat bottom ;
+}
+
+.text-1 {
+    color: white;
+    font-size: 24px;
+    margin-top: 30px;
+    width:600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-1 h2 {
+    font-family: "text-en";
+}
+
+.text-2 {
+    color: white;
+    font-family: "text-en";
+    font-size: 17px;
+    opacity: 0.8;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.main-buttom a{
+    padding: 10px 50px;
+    border-radius:20px;
+    text-decoration: none;
+    color: white;
+    background: hsl(198, 60%, 50%);
+}
+
+.main-buttom {
+    margin-top: 30px;
+}
+
+.sub {
+    background-color: hsl(217, 28%, 15%);
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    grid-template-rows: 2;
+
+}
+
+.subjects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 10px;
+    margin-top: 200px;
+}
