@@ -75,7 +75,7 @@ main {
     align-items: center;
     margin-top: 60px;
     flex-direction: column;
-    background: url(images/bg-curvy-desktop.svg) no-repeat bottom ;
+    
 }
 
 .text-1 {
@@ -119,14 +119,12 @@ main {
 }
 
 .sub {
-    background-color: hsl(217, 28%, 15%);
+    background-color: hsl(218, 28%, 13%);
     width: 100%;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    grid-row: 2;
-    grid-template-rows: 2;
-
+    gap: 200px;
 }
 
 .subjects {
@@ -137,4 +135,128 @@ main {
     color: white;
     gap: 10px;
     margin-top: 200px;
+}
+
+.subjects p {
+    width: 400px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.th p {
+    width: 430px;
+}
+
+.se p {
+    width: 430px;
+}
+
+.subjects {
+    gap: 10px;
+}
+
+.subjects img {
+    margin-bottom: 30px;
+}
+
+.prodective {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(218, 28%, 13%);
+}
+
+.carry {
+    margin-top: -200px;
+    z-index: -1;
+    width: 100%;
+}
+
+.con {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.left img{
+    width: 600px;
+}
+
+.right h1{
+    width: 300px;
+    color: white;
+}
+
+.p1 {
+    color: white;
+    width: 530px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.p2 {
+    color: white;
+    width: 560px;
+}
+
+.link-bottom div {
+    background-color: hsl(176, 68%, 64%);
+    width: 20px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: hsl(176, 68%, 64%);
+    border-bottom: solid hsl(176, 68%, 64%) 2px;
+    width: fit-content;
+    padding: 15px 0;
+}
+
+.link-bottom a {
+    font-size: 16px;
+    text-decoration: none;
+    color: hsl(176, 68%, 64%);
+}
+
+.link-bottom a:hover {
+    color: white;
+
+}
+
+.comment-im {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.back-img {
+
+    left: 0;
+    top: 0;
+}
+
+.comments {
+    background-color: hsl(218, 28%, 13%);
+}
+
+.comment {
+    width: 400px;
+    color: white;
+    background-color: hsl(218, 28%, 13%);
 }
